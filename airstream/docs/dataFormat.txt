@@ -1,0 +1,16 @@
+
+
+data format:
+  dt,dn,mt,x,y
+           x,y,
+           string
+           k,a
+
+dt: device type (format)
+dn: device number (name
+mt: message type
+
+|len|data|
+
+------------------
+

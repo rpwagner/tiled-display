@@ -1,0 +1,30 @@
+Running the application with the wiimote:
+  After installing the wiimote dependencies -- mainly pybluez.
+
+  Cache the wiimote id:
+    While in the flTile directory, run ../flWii/detectAndCacheMote.py
+       Then press the 1 & 2 button on the wiimote simultaneously.
+    After the script finishes, it will display any wiimotes that it detected.
+       It will also store wiimote ids in a file: "mote.cache".
+
+  Run the flTile application normally:  (no extra wii parameter is needed)
+     example: sh mpiTileArg.sh myimage.png 
+     Pressing 1 & 2 buttons will let the wiimote connect.
+     To save batteries, the application will disconnect the wiimote after
+        a minute or so inactivity (i.e. when no infrared light is visible).
+     The "-" button also forces a disconnection.
+
+  Multiple wiimotes:
+     Pressing "+" will change the number of wiimotes that are to be
+        connected.  It cycles through the numbers 1 through 4.  The
+        current value is printed to stdout for now.
+        It's useful because actively trying to connect to 4 wiimotes
+        when only using 1 can impact performance a little.
+     
+    
+
+Debugging use of the Wiimote:
+  There are a few scripts in the flWii directory for testing.
+  irViewBasic.py is a good test that will shows the infrared leds that the 
+      wiimote is detecting.
+

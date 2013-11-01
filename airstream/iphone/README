@@ -1,0 +1,17 @@
+18 Aug 2010
+turam
+
+This simple iPhone application captures touches and sends them to the airstream server.
+
+At launch, the user must fill in the IP address of the machine where the server is running.
+Once successfully connected to the server, a rotating cube indicates the location of touches on the screen. Touches are sent to the Airstream server immediately.
+
+To reconfigure (connect to a different server), touch the gear icon.
+
+An in-house build of this application resides in the release directory. It should be installable by unzipping the .app (not the .dSYM.app) and dragging it and the .mobileprovision files onto iTunes, then syncing your iOS device with iTunes. 
+
+Note: 
+- If the server cannot be reached, the application will currently block on the connect call.
+- Multiple touches are not handled (yet); only the first touch is processed.
+- The connect host can NOT be given as a hostname; it must be given as an IP address (i.e., the app does not resolve hostnames).
+- The release/.dSYM.app file is for debugging purposes only, and is not installable on a device.

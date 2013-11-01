@@ -1,0 +1,40 @@
+
+Dependencies
+
+Install all the software below on all tile display machines.
+
+Prepared packages are of course easiest.  If the os doesn't have a package 
+  for a dependency,  you'll likely have to retrieve the source and do a 
+  "make install" into an alternate directory.  Then copy that directory to all
+  tile display machines.
+
+The debian/ubuntu names of dependencies are listed below:
+Often packaged:
+  mpich-bin
+  libmpich1.0-dev
+  pygame
+  bluetooth    (for the wiimote)
+  python-bluez 
+  python-xlib  
+Packages for compiling source below:
+  python-dev   ( python headers for compiling py libs below)
+  libz-dev
+
+Packages possibly availabe (I've been installing manually, I have 3.0.0 now)
+  python-opengl 
+
+Manual Install
+  PyMPI: http://pympi.sourceforge.net/ 
+         (there are multiple python mpi implementations, if you install a 
+             package, make sure it's the software from this website.
+  pyffmpeg (for playing tiled movies)
+    requires packages:
+      python-pyrex
+      libavcodec-dev
+      libavformat-dev   (possibly libavfilter-dev)
+      libswscale-dev
+      libbz2-dev
+    homepage: http://code.google.com/p/pyffmpeg
+    code: svn checkout http://pyffmpeg.googlecode.com/svn/trunk/ pyffmpeg-read-only
+
+

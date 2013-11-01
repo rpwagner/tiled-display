@@ -1,0 +1,9 @@
+
+run "capture.sh"
+
+then:
+cd captures
+convert -resize 300 am-small.png am300.png
+cp am300.png ~/public_html/am/thumbs300/<somename>_300.png
+then edit webpage's index.html
+

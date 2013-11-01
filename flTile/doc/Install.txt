@@ -1,0 +1,7 @@
+
+Here's how to get things running:
+  - Read Dependencies.txt to install software dependencies.
+  - Read DisplayConfiguration.txt to create a tiled display configuration.
+  - Read Running.txt to run the application.
+
+- 

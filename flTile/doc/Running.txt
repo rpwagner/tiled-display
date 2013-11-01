@@ -1,0 +1,25 @@
+
+Run from the flTile directory.
+
+mpirun -np 8 -machinefile /home/eolson/am-macs/machinefile /home/eolson/am-macs/local/bin/pyMPI tileImage.py $*
+
+mpiTileArg.sh is a good example start script.
+ It is used like this:
+    sh mpiTileArg.sh out.png
+
+It basically contains one line that does this:
+  mpirun -np 8 -machinefile machinefile pyMPI tileImage.py out.png
+
+
+Instead of specifying a single image to load, you can also specify a directory
+    containing images, movies, or tiled movies.
+
+
+----------------------
+Troubleshooting:
+  1) make sure a basic opengl window can be opened.
+       cd flapp/test
+       python test3D.py    (a very simple unshaded cube will show up)
+
+  2) ... to be continued
+

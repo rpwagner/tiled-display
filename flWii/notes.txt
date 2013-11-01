@@ -1,0 +1,11 @@
+
+http://wiibrew.org/index.php?title=Wiimote  
+
+The IR sensor returns values in the range 0..1023 * 0..767. Measurements indicate that the horizontal field of view is approximately 41°, the vertical field of view approximately 31°. This means that one increment corresponds to 0.04° or 25 increments correspond to one degree both in horizontal and in vertical direction.
+
+0x31 is motion sensor, 0x32 is IR camera (???), and 0x33 is both IR camera and motion sensor. 
+
+IR bytes: 10, 12, 36
+
+10:  range 0-1023 for the X dimension, and 0-767 for Y
+     Each location is encoded in 10 bits 

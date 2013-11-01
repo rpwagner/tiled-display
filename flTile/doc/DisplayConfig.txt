@@ -1,0 +1,66 @@
+
+For examples of configurations, look at
+  am09TwinViewConfig1024x768.py,  (example with Twinview, one X display)
+  am09Config1024x768.py, and      (example with two X displays per machine)
+  local2_1680x1050Config.py       (for testing on one machine with 2 windows)
+                                  (local test requires env. var:
+                                     TD_HOSTNAME=localhostname1,localhostname2
+  
+The files are python scripts.
+The function contained should return a configuration object.
+There are improvements that could make configuration easier, but everything
+   should work.
+
+Below are the elements in a tile display configuration.  Rather than typing
+  these in from scratch, modifying one of the examples above is easier.
+  Also, the last item below describes how to specify your config is loaded.
+
+1. Create a TileConfig
+    c = TileConfig()
+
+2. Describe the shape of the windows to be opened on the display(s).
+   localWindow = LocalWindow(Rect(xoffset,yoffset,width,height))
+   Examples:
+   If one machine controls two twinview displays side by side, it can be
+       treated as one large window. (it could also be treated as two windows)
+      * localWindow = LocalWindow(Rect(0,0,2048, 768))
+   If one machine controls two displays running as separate X screens, it
+      would have two windows: 
+      * localWindow1 = LocalWindow(Rect(1024,0, 1024, 768))
+      * localWindow2 = LocalWindow(Rect(   0,0, 1024, 768))
+   These can vary by machine if necessary.
+
+3. Describe a machine's tile size(s) and location(s) within the large tiled
+       display.
+   t = TileDesc( (width, height),(xOffset, yOffset), xDisplay, 
+                        location=tileLocation)
+   Note the tile location parameter.  It can either be an absolute position or
+      relative to the origin of another tile.
+    Examples:
+      t0 = TileDesc( (1024, 768), (0,0),     ":0")
+      t1 = TileDesc( (1024, 768), (1024, 0), ":0", lrtbMullions=(0,0,0,0), location=TileLocation( (1024,0), relative=t0.uid))
+         (the "mullion" parameters have not been tested yet. If you
+                   have mullions, let me know and I'll make sure it works).
+      
+4.  Using the window and tile descriptions you just made, create an individual
+       machine configuration.
+     machine = MachineDesc(hostname, tiles, windows)
+     Example:
+       m6 = MachineDesc("host6", tiles=[t0,t1], windows=localWindow)
+       c.addMachine(m6)
+  
+5.  Return the tile configuration
+     return c
+
+
+6.  The app doesn't yet parse cmd-line parameters, so change the line that
+      loads the configuration in the main tileImage.py file.
+      - At the top of tileImage.py add the line to import your config function.
+         If you created myConfig.py and called your function CreateConfig, add:
+         from myConfig import CreateConfig
+      
+      - Instead of this line: (about line 482)
+          tileConfig = CreateLocalTestConfig()
+         make sure your loading your config instead:
+          tileConfig = CreateConfig()
+

@@ -1,0 +1,40 @@
+{'machines': [{'tiles': [{'mullions': [0, 0, 0, 0], 'uid': '8cdd260c61e31c14a1ab5fa8b0a928946b', 'displayStr': ':0', 'localOffset': (0, 0), 'location': {'relative': False, 'offset': (0, 0)}
+, 'pixelSize': (1280, 1024), 'borders': [0, 0, 0, 0]}
+, {'mullions': [0, 200, 0, 0], 'uid': '8cdd260c61e31c14a1ab60a8b0a9a66498', 'displayStr': ':0', 'localOffset': (1280, 0), 'location': {'relative': '8cdd260c61e31c14a1ab5fa8b0a928946b', 'offset': (1280, 0)}
+, 'pixelSize': (1280, 1024), 'borders': [0, 0, 0, 0]}
+], 'hostname': 'am-mac3', 'ipAddress': None}
+, {'tiles': [{'mullions': [0, 0, 0, 0], 'uid': '8cdd260c61e31c14a1ab61a8b0a9398194', 'displayStr': ':0', 'localOffset': (0, 0), 'location': {'relative': '8cdd260c61e31c14a1ab5fa8b0a928946b', 'offset': (0, 1024)}
+, 'pixelSize': (1280, 1024), 'borders': [0, 0, 0, 0]}
+, {'mullions': [0, 0, 0, 0], 'uid': '8cdd260c61e31c14a1ab62a8b0a9f35c5a', 'displayStr': ':0', 'localOffset': (1280, 0), 'location': {'relative': '8cdd260c61e31c14a1ab61a8b0a9398194', 'offset': (1280, 0)}
+, 'pixelSize': (1280, 1024), 'borders': [0, 0, 0, 0]}
+], 'hostname': 'am-mac2', 'ipAddress': None}
+, {'tiles': [{'mullions': [0, 0, 0, 0], 'uid': '8cdd260c61e31c14a1ab63a8b0a965f6f1', 'displayStr': ':0', 'localOffset': (0, 0), 'location': {'relative': '8cdd260c61e31c14a1ab61a8b0a9398194', 'offset': (0, 1024)}
+, 'pixelSize': (1280, 1024), 'borders': [0, 0, 0, 0]}
+, {'mullions': [0, 0, 0, 0], 'uid': '8cdd260c61e31c14a1ab64a8b0a920aab8', 'displayStr': ':0', 'localOffset': (1280, 0), 'location': {'relative': '8cdd260c61e31c14a1ab63a8b0a965f6f1', 'offset': (1280, 0)}
+, 'pixelSize': (1280, 1024), 'borders': [0, 0, 0, 0]}
+], 'hostname': 'am-mac1', 'ipAddress': None}
+, {'tiles': [{'mullions': [0, 0, 0, 0], 'uid': '8cdd260c61e31c14a1ab65a8b0a9877819', 'displayStr': ':0', 'localOffset': (0, 0), 'location': {'relative': '8cdd260c61e31c14a1ab60a8b0a9a66498', 'offset': (1280, 0)}
+, 'pixelSize': (1280, 1024), 'borders': [0, 0, 0, 0]}
+, {'mullions': [0, 0, 0, 0], 'uid': '8cdd260c61e31c14a1ab66a8b0a99a86cd', 'displayStr': ':0', 'localOffset': (1280, 0), 'location': {'relative': '8cdd260c61e31c14a1ab65a8b0a9877819', 'offset': (1280, 0)}
+, 'pixelSize': (1280, 1024), 'borders': [0, 0, 0, 0]}
+], 'hostname': 'am-mac6', 'ipAddress': None}
+, {'tiles': [{'mullions': [0, 0, 0, 0], 'uid': '8cdd260c61e31c14a1ab67a8b0a955f296', 'displayStr': ':0', 'localOffset': (0, 0), 'location': {'relative': '8cdd260c61e31c14a1ab65a8b0a9877819', 'offset': (0, 1024)}
+, 'pixelSize': (1280, 1024), 'borders': [0, 0, 0, 0]}
+, {'mullions': [0, 0, 0, 0], 'uid': '8cdd260c61e31c14a1ab68a8b0a9f39407', 'displayStr': ':0', 'localOffset': (1280, 0), 'location': {'relative': '8cdd260c61e31c14a1ab67a8b0a955f296', 'offset': (1280, 0)}
+, 'pixelSize': (1280, 1024), 'borders': [0, 0, 0, 0]}
+], 'hostname': 'am-mac5', 'ipAddress': None}
+, {'tiles': [{'mullions': [0, 0, 0, 0], 'uid': '8cdd260c61e31c14a1ab69a8b0a910e531', 'displayStr': ':0', 'localOffset': (0, 0), 'location': {'relative': '8cdd260c61e31c14a1ab67a8b0a955f296', 'offset': (0, 1024)}
+, 'pixelSize': (1280, 1024), 'borders': [0, 0, 0, 0]}
+, {'mullions': [0, 0, 0, 0], 'uid': '8cdd260c61e31c14a1ab6ba8b0a9830a28', 'displayStr': ':0', 'localOffset': (1280, 0), 'location': {'relative': '8cdd260c61e31c14a1ab69a8b0a910e531', 'offset': (1280, 0)}
+, 'pixelSize': (1280, 1024), 'borders': [0, 0, 0, 0]}
+], 'hostname': 'am-mac4', 'ipAddress': None}
+, {'tiles': [{'mullions': [0, 0, 0, 0], 'uid': '8cdd260c61e31c14a1ab6ca8b0a93bab5a', 'displayStr': ':0', 'localOffset': (0, 0), 'location': {'relative': '8cdd260c61e31c14a1ab66a8b0a99a86cd', 'offset': (1280, 0)}
+, 'pixelSize': (1280, 1024), 'borders': [0, 0, 0, 0]}
+, {'mullions': [0, 0, 0, 0], 'uid': '8cdd260c61e31c14a1ab6da8b0a918a7ef', 'displayStr': ':0', 'localOffset': (0, 1024), 'location': {'relative': '8cdd260c61e31c14a1ab6ca8b0a93bab5a', 'offset': (0, 1024)}
+, 'pixelSize': (1280, 1024), 'borders': [0, 0, 0, 0]}
+], 'hostname': 'am-mac8', 'ipAddress': None}
+, {'tiles': [{'mullions': [0, 0, 0, 0], 'uid': '8cdd260c61e31c14a1ab6ea8b0a9d6017b', 'displayStr': ':0', 'localOffset': (0, 0), 'location': {'relative': '8cdd260c61e31c14a1ab6da8b0a918a7ef', 'offset': (0, 1024)}
+, 'pixelSize': (1280, 1024), 'borders': [0, 0, 0, 0]}
+], 'hostname': 'am-mac7', 'ipAddress': None}
+]}
+

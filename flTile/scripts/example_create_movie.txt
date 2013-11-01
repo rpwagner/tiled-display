@@ -1,0 +1,14 @@
+
+# Example of how to create a tiled movie with the included scripts.
+
+# The first step is not necessary if individual frames are already available.
+movieToImages.py mymovie.mp4 mymovieframes
+chopImagesToImageTiles.py mymovieframes mymovietiles 128x128
+imageTilesToTiledMovie.py mymovietiles mymovie.tdmovie
+
+###
+
+# The 128x128 in the line above is the size of the tiles to create.
+
+# If you don't run the first step, the frame filenames for the second step are expected in this format:  anyname_00000000.png
+

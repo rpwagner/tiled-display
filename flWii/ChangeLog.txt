@@ -1,0 +1,14 @@
+A) Establish different patterns (start with 2 dots)
+B) Calibrate tool.
+C) interpret 3D position
+D) Make it quick to connect to known controllers
+
+Separate driver code into another app?
+  network or shared mem?
+
+20080225 Fixed viewer app
+         fixed basic IR coords
+         Added ext IR support
+
+20080222 Wrote IR code
+

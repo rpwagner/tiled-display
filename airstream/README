@@ -1,0 +1,37 @@
+
+Airstream
+A simple protocol(s) and library for passing data across the network.
+It is mainly intended for passing user interaction data such as mouse events. 
+
+How to run a test:
+Run siminput.py to start a server that simulates production of input data.
+In another terminal, run client.py to receive and print input data from the
+   simulator.
+
+Often we run server.py as a central server.
+ Then, we connect a device that produces input (such as netinput.py, wiiclientsender.py, or the iphone app).
+  Then we run client.py, xclient.py or a custom client to receive input.  (The client can also be connected first).
+Example: In three separate terminals, run this:
+>  python server.py --quiet  # will print events without the --quiet
+>  python netinput.py
+>  python client.py
+
+
+Protocol and implementation:
+  The initial implementation uses TCP with a simple comma delimited ascii format.  See docs/dataFormat.txt for information about the data format.
+
+Developing
+ The networking code uses the twisted python networking library.  If you write additional code, you may ant to read a quick overview of twisted.
+  Example of sending device input: simple: siminput.py  complex: wiicliensender.py
+  Example of receiving input: xclient.py
+ 
+
+An iphone application that sends events is included in the iphone directory.
+
+Currently, xclient.py and wiiserver.py depend on classes from flWii.
+  ( svn+ssh://terra.mcs.anl.gov/home/eolson/repos/flWii/trunk )
+
+windowSender.py opens a window for capturing and sending mouse and keyboard events.  It uses the flapp library.
+
+The "cpp" subdirectory shows one way to use airstream with a c++ application, since airstream is python based.
+
