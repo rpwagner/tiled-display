@@ -1,0 +1,61 @@
+import sys, os
+sys.path = [os.path.join(os.getcwd(), "..") ] + sys.path
+
+from tileConfig import TileConfig, TileDesc, MachineDesc, SaveConfig, LoadConfig, TileLocation, Rect, LocalWindow
+
+def CreateAMConfig():
+    c = TileConfig()
+
+    localWindow0 = LocalWindow(Rect(0,0,3072, 768), ":0")
+    localWindow1 = LocalWindow(Rect(0,0,3072, 768), ":0.1")
+    localWindow2 = LocalWindow(Rect(0,0,3072, 768), ":0.2")
+    localWindow3 = LocalWindow(Rect(0,0,3072, 768), ":0.3")
+    localWindow4 = LocalWindow(Rect(0,0,3072, 768), ":0.4")
+    localWindow5 = LocalWindow(Rect(0,0,3072, 768), ":0.5")
+    localWindow6 = LocalWindow(Rect(0,0,3072, 768), ":0.6")
+    localWindow7 = LocalWindow(Rect(0,0,3072, 768), ":0.7")
+
+    t4 = TileDesc( (3072, 768), (0,0), None, lrtbMullions=(0,0,0,0), location=TileLocation( (0,0)))
+    m4 = MachineDesc( "ocular4", tiles = [t4], windows=[localWindow7])
+    c.addMachine(m4)
+
+    t3 = TileDesc( (3072, 768), (0,0), None, location=TileLocation( (0, 768), relative=t4.uid ))
+    m3 = MachineDesc( "ocular3", tiles = [t3], windows=[localWindow6])
+    c.addMachine(m3)
+
+    t2 = TileDesc( (3072, 768), (0,0), None, location=TileLocation( (0,768), relative=t3.uid ))
+    m2 = MachineDesc( "ocular2", tiles = [t2], windows=[localWindow5])
+    c.addMachine(m2)
+
+    t1 = TileDesc( (3072, 768), (0,0), None, lrtbMullions=(0,0,0,0), location=TileLocation( (0,768), relative=t2.uid ))
+    m1 = MachineDesc( "ocular1", tiles = [t1], windows=[localWindow1])
+    c.addMachine(m1)
+
+    t8 = TileDesc( (3072, 768), (0,0), None, lrtbMullions=(0,0,0,0), location=TileLocation( (3072,0), relative=t4.uid ))
+    m8 = MachineDesc( "ocular8", tiles = [t8], windows=[localWindow0])
+    c.addMachine(m8)
+
+    t7 = TileDesc( (3072, 768), (0,0), None, lrtbMullions=(0,0,0,0), location=TileLocation( (0,768), relative=t8.uid ))
+    m7 = MachineDesc( "ocular7", tiles = [t7], windows=[localWindow4])
+    c.addMachine(m7)
+
+    t6 = TileDesc( (3072, 768), (0,0), None, lrtbMullions=(0,0,0,0), location=TileLocation( (0,768), relative=t7.uid ))
+    m6 = MachineDesc( "ocular6", tiles = [t6], windows=[localWindow3])
+    c.addMachine(m6)
+
+    t5 = TileDesc( (3072, 768), (0,0), None, lrtbMullions=(0,0,0,0), location=TileLocation( (0,768), relative=t6.uid ))
+    m5 = MachineDesc( "ocular5", tiles = [t5], windows=[localWindow2])
+    c.addMachine(m5)
+
+    return c
+
+if __name__ == "__main__":
+    c = CreateAMConfig()
+    SaveConfig(c, "/tmp/testconfig")
+    print c.asDict()
+    c2 = LoadConfig("/tmp/testconfig")
+    if c == c2:
+        print "PASS: Saved and reread config matched original."
+    else:
+        print "FAIL: Saved and reread config did not match original.  Saving as testconfig2 for comparison"
+        SaveConfig(c2, "/tmp/testconfig2")
